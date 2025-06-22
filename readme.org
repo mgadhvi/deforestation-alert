@@ -1,0 +1,85 @@
+#+TITLE: Deforestation Alert CLI
+#+AUTHOR: Manish Gadhvi
+#+OPTIONS: toc:nil
+
+* Overview
+
+This project is a command-line tool that downloads daily fire data from NASA's FIRMS system and checks for unusually high fire activity in a defined region. It is designed to support conservation monitoring, spatial data analysis, and rapid alerting workflows.
+
+This is currently a CLI prototype, but it is intended to evolve into a full application with user-facing components and automation features.
+
+* Features
+
+- Downloads daily MODIS fire point data
+- Filters data using region bounding boxes
+- Triggers an alert if fire activity exceeds a defined threshold
+- Saves results as GeoJSON for use in GIS tools
+- Built with Python, GeoPandas, and PostGIS-compatible output
+
+* Quickstart
+
+**1. Clone the repo**
+
+#+begin_src bash
+git clone https://github.com/yourusername/deforestation-alert.git
+cd deforestation-alert
+#+end_src
+
+**2. Install dependencies**
+
+#+begin_src bash
+pip install -r requirements.txt
+#+end_src
+
+**3. Run a sample alert**
+
+#+begin_src bash
+python alert.py --region borneo --threshold 100
+#+end_src
+
+**4. Output**
+
+GeoJSON fire points will be saved to ~output/REGION_YYYY-MM-DD.geojson~
+
+* Regions
+
+Bounding boxes for monitored regions are stored in ~regions/*.json~
+
+Example: ~regions/borneo.json~
+
+#+begin_src json
+{
+  "name": "Borneo",
+  "bbox": [109.0, -4.0, 117.0, 6.0]
+}
+#+end_src
+
+* Project Roadmap
+
+**Current Phase: CLI Prototype**
+
+- [X] Fetch daily FIRMS fire data
+- [X] Filter by bounding box from region files
+- [X] Save GeoJSON output for visualization
+- [X] Threshold-based alert trigger via CLI
+
+**Next Steps: CLI Enhancements**
+
+- [ ] Add config for custom thresholds per region
+- [ ] Add rolling average baseline comparison
+- [ ] Archive past fire data for analysis
+- [ ] Store alerts and fire points in SQLite or PostGIS
+- [ ] Build reusable Makefile for development and automation
+
+**Future Phase: Full App Development**
+
+- [ ] Streamlit or Dash web UI for region and threshold selection
+- [ ] Map-based interface using Folium or Leaflet
+- [ ] REST API for querying fire alerts
+- [ ] Scheduled runs via cron or Prefect
+- [ ] Notification system (email, webhook, etc.)
+- [ ] Dockerized deployment for reproducibility
+
+* Author
+
+Manish Gadhvi :: Conservation-focused technologist | Open Source for Nature
