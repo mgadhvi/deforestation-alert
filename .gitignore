@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Output data and results
+output/
+*.geojson
+*.csv
+*.json
+
+# Environment and dependency files
+.env
+.venv/
+venv/
+ENV/
+Pipfile.lock
+poetry.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Emacs files
+*~
+\#*\#
+.\#*
+
+# Tests and coverage
+htmlcov/
+coverage.xml
+*.cover
+.pytest_cache/
