@@ -18,26 +18,26 @@ This is currently a CLI prototype, but it is intended to evolve into a full appl
 
 * Quickstart
 
-**1. Clone the repo**
+*1. Clone the repo*
 
 #+begin_src bash
 git clone https://github.com/yourusername/deforestation-alert.git
 cd deforestation-alert
 #+end_src
 
-**2. Install dependencies**
+*2. Install dependencies*
 
 #+begin_src bash
 pip install -r requirements.txt
 #+end_src
 
-**3. Run a sample alert**
+*3. Run a sample alert*
 
 #+begin_src bash
 python alert.py --region borneo --threshold 100
 #+end_src
 
-**4. Output**
+*4. Output*
 
 GeoJSON fire points will be saved to ~output/REGION_YYYY-MM-DD.geojson~
 
