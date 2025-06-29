@@ -73,8 +73,8 @@ Example: ~regions/borneo.json~
 
 **Future Phase: Full App Development**
 
-- [ ] Streamlit or Dash web UI for region and threshold selection
-- [ ] Map-based interface using Folium or Leaflet
+- [x] Streamlit or Dash web UI for region and threshold selection
+- [x] Map-based interface using Folium or Leaflet
 - [ ] REST API for querying fire alerts
 - [ ] Scheduled runs via cron or Prefect
 - [ ] Notification system (email, webhook, etc.)
